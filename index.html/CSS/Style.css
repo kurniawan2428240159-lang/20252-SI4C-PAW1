@@ -1,0 +1,33 @@
+/* elmenet selector */
+/* referensi web colorhunt.com */
+body {
+    background-color: red;
+    color: black;
+    
+
+}
+.text-center {text-align: center;}
+.bg-Warning { background-color: yellow; border-radius: 20px 20px 20px 20px;}
+.text-black { color: black;}
+.p-1 { padding: 20%;}  
+.m-1 { margin: 20%;}
+
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}

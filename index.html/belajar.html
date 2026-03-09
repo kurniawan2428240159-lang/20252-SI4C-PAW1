@@ -6,107 +6,84 @@
     <title>DUNIA CODING</title>
 </head>
 <body>
-    <table border="1">
-        <tr>
-            <td>Nama:</td>
-            <td>Program Studi:</td>
-        </tr>
-        <tr>
-            <td>Kurniawan</td>
-            <td>Sistem Informasi</td> 
-        </tr>
-        <!-- coplsen -->
-         <table border="1"> <br>
-            <tr>
-                <td colspan="5">
-                    Dunia Coding
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Dunia Hacker
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Dunia Teknologi AI
-                </td>
-            </tr>
-    </table>
-    <table border="1"> <br>         
-        <tr>
-            <td rowspan="5">
-                Dunia Perang
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Dunia Kritis
-            </td>
-            <td>Dunia Penuh Dengan Drama</td>
-        </tr>
-        <tr>
-            <td>
-                Dunia Krisis
-            </td>
-            <td>Dunia Para Koruptor</td>
-        </tr>
-    </table>
+    <!DOCTYPE html>
+<html>
+<head>
+<title>Sistem Login Mahasiswa</title>
 
-    <table border="1"> <br>
-        <tr>
-            <td rowspan="2">No</td>
-            <td rowspan="2">Npm</td>
-            <td rowspan="2">Nama</td>
-            <td colspan="2">IP Semester</td>
-            <td rowspan="2">IP Komulatif</td>
-        </tr>
-        <tr>
-            <td>S1</td>
-            <td>S2</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>001</td>
-            <td>Ahmad</td>
-            <td>4.00</td>
-            <td>4.00</td>
-            <td>4.00</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>002</td>
-            <td>Rizky</td>
-            <td>3.50</td>
-            <td>4.00</td>
-            <td>3.75</td>
-        </tr>
-    </table> <br>
-    <p>Masukan Data Diri Anda...</p>
-    <form action="Data.html">
-        Username: <br>
-        <input type="Username" name="Username" id="Username"> <br>
-        NPM: <br>
-        <input type="NPM" name="NPM" id="NPM"> <br>
-        Gmail: <br>
-        <input type="email" name="email" id="email"> <br>
-        Tanggal Lahir: <br>
-        <input type="date" name="date" id="date"> <br>
-        Jenis Kelamin: <br>
-        <input type="radio" name="dt" value="L" id="dt"> Laki - laki <br>
-        <input type="radio" name="dt" value="P" id="dt"> Perempuan <br>
-        Mengetahui UMDP dari mana: <br>
-        <input type="checkbox" name="Md" value="M"> Media <br>
-        keluarga: <br>
-        <input type="checkbox" name="hg" value="k"> Keluarga <br>
-        <input type="file" >
+<script>
 
+var user = "";
+var pass = "";
 
+function register(){
 
+user = document.getElementById("reguser").value;
+pass = document.getElementById("regpass").value;
 
+document.getElementById("hasilreg").innerHTML =
+"Registrasi berhasil! Silakan login.";
 
+}
 
-    </form>
+function login(){
 
+var username = document.getElementById("loguser").value;
+var password = document.getElementById("logpass").value;
+
+if(username == user && password == pass){
+document.getElementById("hasillog").innerHTML =
+"Login berhasil! Selamat datang " + username;
+}
+
+else{
+document.getElementById("hasillog").innerHTML =
+"Username atau Password salah";
+}
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2>Menu Registrasi</h2>
+
+<label>Username :</label><br>
+<input type="text" id="reguser">
+
+<br><br>
+
+<label>Password :</label><br>
+<input type="password" id="regpass">
+
+<br><br>
+
+<button onclick="register()">Registrasi</button>
+
+<p id="hasilreg"></p>
+
+<hr>
+
+<h2>Menu Login</h2>
+
+<label>Username :</label><br>
+<input type="text" id="loguser">
+
+<br><br>
+
+<label>Password :</label><br>
+<input type="password" id="logpass">
+
+<br><br>
+
+<button onclick="login()">Login</button>
+
+<p id="hasillog"></p>
+
+</body>
+</html>
 </body>
 </html>

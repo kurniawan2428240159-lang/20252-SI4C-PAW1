@@ -1,0 +1,26 @@
+/* hp max-width: 600px */
+body {
+  background-color: blue;
+}
+/*  tablet main width: 600px */
+@media screen and (min-width: 600px) {
+  body {
+    background-color: green;
+  }
+  col-md-50 {
+    width: 50%;
+    float: left;
+  }
+
+  /* desktop min width: 922px */
+  @media screen and (min-width: 922px) {
+    body {
+      background-color: red;
+    }
+  }
+  /* class selector */
+  .col-lg-25 {
+    width: 25%;
+    float: left;
+  }
+}

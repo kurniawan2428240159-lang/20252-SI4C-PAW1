@@ -1,89 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DUNIA CODING</title>
-</head>
-<body>
-    <!DOCTYPE html>
-<html>
-<head>
-<title>Sistem Login Mahasiswa</title>
+  </head>
+  <body>
+    <!doctype html>
+    <html>
+      <head>
+        <title>Sistem Login Mahasiswa</title>
 
-<script>
+        <script>
+          var user = "";
+          var pass = "";
 
-var user = "";
-var pass = "";
+          function register() {
+            user = document.getElementById("reguser").value;
+            pass = document.getElementById("regpass").value;
 
-function register(){
+            document.getElementById("hasilreg").innerHTML =
+              "Registrasi berhasil! Silakan login.";
+          }
 
-user = document.getElementById("reguser").value;
-pass = document.getElementById("regpass").value;
+          function login() {
+            var username = document.getElementById("loguser").value;
+            var password = document.getElementById("logpass").value;
 
-document.getElementById("hasilreg").innerHTML =
-"Registrasi berhasil! Silakan login.";
+            if (username == user && password == pass) {
+              document.getElementById("hasillog").innerHTML =
+                "Login berhasil! Selamat datang " + username;
+            } else {
+              document.getElementById("hasillog").innerHTML =
+                "Username atau Password salah";
+            }
+          }
+        </script>
+      </head>
 
-}
+      <body>
+        <h2>Menu Registrasi</h2>
 
-function login(){
+        <label>Username :</label><br />
+        <input type="text" id="reguser" />
 
-var username = document.getElementById("loguser").value;
-var password = document.getElementById("logpass").value;
+        <br /><br />
 
-if(username == user && password == pass){
-document.getElementById("hasillog").innerHTML =
-"Login berhasil! Selamat datang " + username;
-}
+        <label>Password :</label><br />
+        <input type="password" id="regpass" />
 
-else{
-document.getElementById("hasillog").innerHTML =
-"Username atau Password salah";
-}
+        <br /><br />
 
-}
+        <button onclick="register()">Registrasi</button>
 
-</script>
+        <p id="hasilreg"></p>
 
-</head>
+        <hr />
 
-<body>
+        <h2>Menu Login</h2>
 
-<h2>Menu Registrasi</h2>
+        <label>Username :</label><br />
+        <input type="text" id="loguser" />
 
-<label>Username :</label><br>
-<input type="text" id="reguser">
+        <br /><br />
 
-<br><br>
+        <label>Password :</label><br />
+        <input type="password" id="logpass" />
 
-<label>Password :</label><br>
-<input type="password" id="regpass">
+        <br /><br />
 
-<br><br>
+        <button onclick="login()">Login</button>
 
-<button onclick="register()">Registrasi</button>
-
-<p id="hasilreg"></p>
-
-<hr>
-
-<h2>Menu Login</h2>
-
-<label>Username :</label><br>
-<input type="text" id="loguser">
-
-<br><br>
-
-<label>Password :</label><br>
-<input type="password" id="logpass">
-
-<br><br>
-
-<button onclick="login()">Login</button>
-
-<p id="hasillog"></p>
-
-</body>
-</html>
-</body>
+        <p id="hasillog"></p>
+      </body>
+    </html>
+  </body>
 </html>
